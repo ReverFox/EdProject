@@ -1,22 +1,20 @@
 package ru.fokinde.DuckDuckGo;
 
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
-import static ru.fokinde.DuckDuckGo.MainPage.*;
-
 import com.codeborne.selenide.Configuration;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.TmsLink;
-import org.aspectj.lang.annotation.Before;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static ru.fokinde.DuckDuckGo.MainPage.*;
 
 public class DuckDuckGoTest {
 
     @BeforeClass
     public void init() {
-        WebDriverManager.chromedriver().setup();
         Configuration.headless = true;
         Configuration.browser = "chrome";
     }
