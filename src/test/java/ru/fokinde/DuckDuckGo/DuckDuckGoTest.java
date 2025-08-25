@@ -17,6 +17,7 @@ public class DuckDuckGoTest {
     public void init() {
         Configuration.headless = true;
         Configuration.browser = "chrome";
+        Configuration.remote = "http://192.168.55.112:4444/wd/hub";
     }
 
     @Test(description = "Проверка отображения поиска на главной странице")
