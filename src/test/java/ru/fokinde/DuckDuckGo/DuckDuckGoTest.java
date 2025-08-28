@@ -9,8 +9,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static ru.fokinde.DuckDuckGo.MainPage.ABOUT_REF;
-import static ru.fokinde.DuckDuckGo.MainPage.SEARCH_BOX;
+import static ru.fokinde.DuckDuckGo.MainPage.*;
 
 public class DuckDuckGoTest {
 
@@ -32,9 +31,16 @@ public class DuckDuckGoTest {
     }
 
     @Test(description = "Проверка наличия сcылки \"About\"")
-    @TmsLink("TMS-001")
+    @TmsLink("TMS-002")
     public void mainPageAboutRefVisibleTest() {
         open("https://duckduckgo.com");
         $(By.cssSelector(ABOUT_REF)).should(exist);
+    }
+
+    @Test(description = "Проверка наличия кнопки AI \"About\"")
+    @TmsLink("TMS-003")
+    public void mainPageAiButtonVisibleTest() {
+        open("https://duckduckgo.com");
+        $(By.cssSelector(AI_CHAT_BUTTON)).should(exist);
     }
 }
