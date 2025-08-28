@@ -21,7 +21,7 @@ public class DuckDuckGoTest {
         Configuration.remote = "http://192.168.56.1:4444/";
     }
 
-    @Test(description = "Поисковая строка отображается на главной странице")
+    @Test(description = "Проверка наличия поисковой строки")
     @TmsLink("TMS-001")
     public void mainPageSearchBoxVisibleTest() {
         open("https://duckduckgo.com");
@@ -32,7 +32,7 @@ public class DuckDuckGoTest {
         //$(By.cssSelector(SIDE_BAR_BUTTON)).should(exist);
     }
 
-    @Test(description = "Проверка отображения поиска на главной странице")
+    @Test(description = "Проверка наличия сылки \"About\"")
     @TmsLink("TMS-001")
     public void mainPageAboutRefVisibleTest() {
         open("https://duckduckgo.com");
