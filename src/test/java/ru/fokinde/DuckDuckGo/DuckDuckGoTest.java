@@ -26,13 +26,12 @@ public class DuckDuckGoTest {
     public void mainPageSearchBoxVisibleTest() {
         open("https://duckduckgo.com");
         $(By.cssSelector(SEARCH_BOX)).should(exist);
-        //$(By.cssSelector(ABOUT_REF)).should(exist);
         //$(By.cssSelector(SEARCH_BUTTON)).should(exist);
         //$(By.cssSelector(AI_CHAT_BUTTON)).should(exist);
         //$(By.cssSelector(SIDE_BAR_BUTTON)).should(exist);
     }
 
-    @Test(description = "Проверка наличия сылки \"About\"")
+    @Test(description = "Проверка наличия сcылки \"About\"")
     @TmsLink("TMS-001")
     public void mainPageAboutRefVisibleTest() {
         open("https://duckduckgo.com");
