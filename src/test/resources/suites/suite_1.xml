@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "testng-1.0.dtd" >
+<suite name="suite_1">
+    <test name="main_page">
+        <classes>
+            <class name="ru.fokinde.DuckDuckGo.DuckDuckGoMainPageTest" />
+        </classes>
+    </test>
+</suite>
