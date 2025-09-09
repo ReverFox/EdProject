@@ -60,7 +60,7 @@ public class DuckDuckGoMainPageTest {
 
     @Test(description = "Боковое меню. Закрытие меню", dependsOnMethods = {"openSideMenuTest"})
     @TmsLink("TMS-005")
-    public void closeSideMenuTest() throws InterruptedException {
+    public void closeSideMenuTest() {
         DesktopMainPage mainPage = new DesktopMainPage();
         mainPage.closeSideMenu();
         SIDE_MENU.shouldNotBe(exist);

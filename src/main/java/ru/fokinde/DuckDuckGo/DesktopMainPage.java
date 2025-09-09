@@ -22,7 +22,7 @@ public class DesktopMainPage {
         SIDE_MENU_OPEN_BUTTON
                 .shouldBe(visible)
                 .click();
-    };
+    }
     
     public void closeSideMenu() {
         SIDE_MENU_CLOSE_BUTTON
