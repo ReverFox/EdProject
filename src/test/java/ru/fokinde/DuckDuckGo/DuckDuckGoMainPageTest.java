@@ -87,11 +87,12 @@ public class DuckDuckGoMainPageTest {
     @Test(description = "Проверка колличества результатов поиска")
     @TmsLink("TMS-007")
     public void searchResultQuantityTest() {
-        final Integer RESULT_QUANTITY = 10;
+        final int RESULT_QUANTITY = 10;
         DesktopMainPage mainPage = open("https://duckduckgo.com", DesktopMainPage.class);
         DesktopSearchResultPage searchResultPage = mainPage.search("Hello, World!");
+        sleep(2000);
         assertThat(searchResultPage.SEARCH_RESULTS.size())
-                .as("Количество результатов: %s".format(RESULT_QUANTITY.toString()))
+                .as("Количество найденых результатов: %d".formatted(RESULT_QUANTITY))
                 .isEqualTo(RESULT_QUANTITY);
 
     }
