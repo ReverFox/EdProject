@@ -1,9 +1,9 @@
-package ru.fokinde.DuckDuckGo;
+package ru.fokinde.duckduckgo;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Epic;
-import io.qameta.allure.Story;
+import io.qameta.allure.Feature;
 import io.qameta.allure.TmsLink;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Epic("Main page")
-@Story("Side menu")
+@Feature("Side menu")
 public class DuckDuckGoMainPageTest {
 
     @BeforeClass
@@ -94,6 +94,5 @@ public class DuckDuckGoMainPageTest {
         assertThat(searchResultPage.SEARCH_RESULTS.size())
                 .as("Количество найденых результатов: %d".formatted(RESULT_QUANTITY))
                 .isEqualTo(RESULT_QUANTITY);
-
     }
 }

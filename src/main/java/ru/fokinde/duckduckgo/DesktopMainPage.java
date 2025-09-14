@@ -1,4 +1,4 @@
-package ru.fokinde.DuckDuckGo;
+package ru.fokinde.duckduckgo;
 
 
 import com.codeborne.selenide.SelenideElement;

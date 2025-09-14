@@ -2,7 +2,7 @@
 <suite name="suite_1">
     <test name="main_page">
         <classes>
-            <class name="ru.fokinde.DuckDuckGo.DuckDuckGoMainPageTest" />
+            <class name="ru.fokinde.duckduckgo.DuckDuckGoMainPageTest" />
         </classes>
     </test>
 </suite>
